@@ -1,0 +1,46 @@
+include ../config/tabs
+include ../config/about
+include ../config/stats
+
+include ../mixins/list
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+    #top-icons.top-icons
+      #icon-arrow.top-icons__arrow
+      #icon-heart.top-icons__heart
+    main
+      .poke__view#pokeview
+        .poke__number#pokenumber #001
+        .poke__info
+          .poke__info-name#pokename Bulbasaur
+          .poke__info-type#poketype1 Grass
+          .poke__info-type#poketype2 Poison
+        .poke__img#pokeimg
+          img(src="", alt="pokemon").poke__img
+      
+      poke__stats#pokestats
+        #tap-bar.tap-bar
+          +list(tabs)
+        #statsbox.stats-box
+          
+          .stats-box__about
+            +list(about)
+            h2 Breeding
+            +list(breeding)
+
+          .stats-box__stats
+            +list(stats)
+              h4 50
+              progress(value="50" max="100")
+
+            h2 Type Defenses
+            p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ullam deserunt facere iure deleniti nemo distinctio nobis eveniet laboriosam amet.
+
+      
+      
