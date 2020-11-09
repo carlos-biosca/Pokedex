@@ -1,90 +1,26 @@
-<!DOCTYPE html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
-  body
+extends ../templates/template.pug
+
+block top
+
     #topbar.topbar
       input(type="text" name="search" placeholder="Search Pokemon" id="search")
-      button 
-        #icon-slider.top-icons__slider sliders
+      #sliders
+        button(type="button").button__slider sliders
 
     .top-title
       h1 Pokedex
-    
+
+block main
+
     main#main
-      .pokebox
-        .poke__number#pokenumber #001
-        .poke__info
-          .poke__info-name#pokename Bulbasaur
-          .poke__info-type#poketype1 Grass
-          .poke__info-type#poketype2 Poison
-        .poke__img#pokeimg
-          img(src="", alt="pokemon").poke__img
+      .pokemain#pokemain
+        include ../includes/pokemon.pug
+        include ../includes/pokemon.pug
+        include ../includes/pokemon.pug
+        include ../includes/pokemon.pug
+        include ../includes/pokemon.pug
+        include ../includes/pokemon.pug
+        include ../includes/pokemon.pug
+        include ../includes/pokemon.pug
 
-      .pokebox
-        .poke__number#pokenumber #002
-        .poke__info
-          .poke__info-name#pokename Bulbasaur
-          .poke__info-type#poketype1 Grass
-          .poke__info-type#poketype2 Poison
-        .poke__img#pokeimg
-          img(src="", alt="pokemon").poke__img
-
-      .pokebox
-        .poke__number#pokenumber #003
-        .poke__info
-          .poke__info-name#pokename Bulbasaur
-          .poke__info-type#poketype1 Grass
-          .poke__info-type#poketype2 Poison
-        .poke__img#pokeimg
-          img(src="", alt="pokemon").poke__img
-
-      .pokebox
-        .poke__number#pokenumber #004
-        .poke__info
-          .poke__info-name#pokename Bulbasaur
-          .poke__info-type#poketype1 Grass
-          .poke__info-type#poketype2 Poison
-        .poke__img#pokeimg
-          img(src="", alt="pokemon").poke__img
-
-      .pokebox
-        .poke__number#pokenumber #005
-        .poke__info
-          .poke__info-name#pokename Bulbasaur
-          .poke__info-type#poketype1 Grass
-          .poke__info-type#poketype2 Poison
-        .poke__img#pokeimg
-          img(src="", alt="pokemon").poke__img
-
-      .pokebox
-        .poke__number#pokenumber #006
-        .poke__info
-          .poke__info-name#pokename Bulbasaur
-          .poke__info-type#poketype1 Grass
-          .poke__info-type#poketype2 Poison
-        .poke__img#pokeimg
-          img(src="", alt="pokemon").poke__img
-
-      .pokebox
-        .poke__number#pokenumber #007
-        .poke__info
-          .poke__info-name#pokename Bulbasaur
-          .poke__info-type#poketype1 Grass
-          .poke__info-type#poketype2 Poison
-        .poke__img#pokeimg
-          img(src="", alt="pokemon").poke__img
-
-      .pokebox
-        .poke__number#pokenumber #008
-        .poke__info
-          .poke__info-name#pokename Bulbasaur
-          .poke__info-type#poketype1 Grass
-          .poke__info-type#poketype2 Poison
-        #pokeimg
-          img(src="", alt="pokemon").poke__img
-    
-    #sliders
-      button(type="button").button__slider
+        

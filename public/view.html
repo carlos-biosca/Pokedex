@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <title>Pokedex</title>
   </head>
   <body>
     <div class="top-icons" id="top-icons">
@@ -11,14 +12,16 @@
       <div class="top-icons__heart" id="icon-heart"></div>
     </div>
     <main>
-      <div class="poke__view" id="pokeview">
-        <div class="poke__number" id="pokenumber">#001</div>
-        <div class="poke__info">
-          <div class="poke__info-name" id="pokename">Bulbasaur</div>
-          <div class="poke__info-type" id="poketype1">Grass</div>
-          <div class="poke__info-type" id="poketype2">Poison</div>
+      <div class="pokeview" id="pokeview">
+        <div class="pokebox">
+          <div class="pokebox__number" id="pokenumber">#001</div>
+          <div class="pokebox__info">
+            <div class="pokebox__info-name" id="pokename">Bulbasaur</div>
+            <div class="pokebox__info-type" id="poketype1">Grass</div>
+            <div class="pokebox__info-type" id="poketype2">Poison</div>
+          </div>
+          <div class="pokebox__img" id="pokeimg"><img class="poke__img-src" src="" alt="pokemon"/></div>
         </div>
-        <div class="poke__img" id="pokeimg"><img class="poke__img" src="" alt="pokemon"/></div>
       </div>
       <poke__stats id="pokestats">
         <div class="tap-bar" id="tap-bar">
