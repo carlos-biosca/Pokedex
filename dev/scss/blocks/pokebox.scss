@@ -1,0 +1,47 @@
+.pokebox {
+  background-color: $grey-color;
+  margin: 5px;
+  border-radius: 20px;
+  padding: 1rem 0 0 1rem;
+  position: relative;
+  transition: transform 0.35s;
+  transform: none;
+  &__name {
+    margin-top: 0.2rem;
+    position: absolute;
+    color: $white-color;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  &__number {
+    background-color: $soft-color;
+    font-size: 0.8rem;
+    font-weight: $font-bold;
+    width: 40%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0.2rem 0;
+  }
+  &__img {
+    width: 50%;
+    transform: scale(0.8);
+    z-index: 10;
+  }
+  &__icon {
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    right: -20px;
+    bottom: -10px;
+    filter: invert(92%) sepia(20%) saturate(408%) hue-rotate(185deg)
+      brightness(99%) contrast(89%);
+  }
+  &.isNotVisible {
+    transform: scale(0.9);
+  }
+}

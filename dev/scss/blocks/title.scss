@@ -1,0 +1,16 @@
+.title {
+  position: sticky;
+  top: 10vh;
+  z-index: 99;
+  width: 100%;
+  background-color: $white-color;
+  border-bottom: 1px solid $black-color;
+  & h1 {
+    font-size: 2.5rem;
+    font-weight: $font-bold;
+    padding-bottom: 0.3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+}

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap");
-:root { --white-color: #f0f2f6; --grey-color: #aab3c7; --red-color: #f42a28; --green-color: #14a06f; --blue-color: #37a5c6; --black-color: #000000; }
+:root { --white-color: #f0f2f6; --grey-color: #aab3c7; --soft-color: #dde2f0; --dark-color: #a2a2a2; --red-color: #f42a28; --green-color: #14a06f; --blue-color: #37a5c6; --black-color: #000000; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document ========================================================================== */
@@ -110,4 +110,40 @@ template { display: none; }
 /** Add the correct display in IE 10. */
 [hidden] { display: none; }
 
-body { background-color: var(--white-color); color: var(--black-color); min-height: 100vh; font-family: "Roboto", sans-serif; }
+html { scroll-behavior: smooth; }
+
+body { background-color: var(--white-color); color: var(--black-color); font-weight: 400; min-height: 100vh; font-family: "Roboto", sans-serif; }
+
+.topbar { height: 10vh; width: 100%; display: flex; justify-content: space-between; align-items: center; position: -webkit-sticky; position: sticky; top: 0; z-index: 100; background-color: var(--white-color); }
+
+.topbar__input { outline: none; width: 50%; padding: 0.5rem; margin-left: 12px; }
+
+.topbar__button { height: 30px; width: 30px; margin-right: 10px; background: url("../assets/icons/sliders.svg"); background-color: transparent; border: none; z-index: 101; }
+
+.topbar__img { position: fixed; height: 300px; right: -124px; filter: invert(87%) sepia(8%) saturate(265%) hue-rotate(186deg) brightness(100%) contrast(100%); }
+
+.title { position: -webkit-sticky; position: sticky; top: 10vh; z-index: 99; width: 100%; background-color: var(--white-color); border-bottom: 1px solid var(--black-color); }
+
+.title h1 { font-size: 2.5rem; font-weight: 700; padding-bottom: 0.3rem; margin-top: 0; margin-bottom: 0; margin-left: 10px; }
+
+.main { background-color: var(--white-color); display: grid; grid-template-columns: 1fr 1fr; justify-items: center; align-items: center; padding: 0.5rem 0 0 0; }
+
+.pokebox { background-color: var(--grey-color); margin: 5px; border-radius: 20px; padding: 1rem 0 0 1rem; position: relative; transition: transform 0.35s; transform: none; }
+
+.pokebox__name { margin-top: 0.2rem; position: absolute; color: var(--white-color); }
+
+.pokebox__info { display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; }
+
+.pokebox__number { background-color: var(--soft-color); font-size: 0.8rem; font-weight: 700; width: 40%; border-radius: 10px; text-align: center; padding: 0.2rem 0; }
+
+.pokebox__img { width: 50%; transform: scale(0.8); z-index: 10; }
+
+.pokebox__icon { position: absolute; width: 70%; height: 100%; right: -20px; bottom: -10px; filter: invert(92%) sepia(20%) saturate(408%) hue-rotate(185deg) brightness(99%) contrast(89%); }
+
+.pokebox.isNotVisible { transform: scale(0.9); }
+
+.gotop { width: 30px; height: 30px; position: fixed; z-index: 100; background-color: var(--blue-color); bottom: 20px; right: 10px; text-align: center; padding: 14px 10px 7px 10px; border-radius: 100%; outline: none; transform: translateX(100%); pointer-events: none; transition: transform 0.35s; }
+
+.gotop img { width: 60%; pointer-events: none; }
+
+.gotop.scrollOn { transform: translateX(0%); pointer-events: all; }
