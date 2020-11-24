@@ -1,9 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   const loadData = () => {
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=30&offset=0')
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=50&offset=0')
       .then(response => response.json())
-      .then(data => renderData(data))
+      .then(data => {
+        renderData(data)
+        isCardVisible()
+        lazy()
+      })
       .catch((err) => console.log(err));
   }
 
@@ -19,8 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
       element.innerHTML = `
         <div class="pokebox__name">${name}</div>
         <div class="pokebox__info">
-        <div class="pokebox__number" id="pokenumber">#${id}</div>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index + 1}.png" alt="pokemon" class="pokebox__img"></div>`
+          <div class="pokebox__number">#${id}</div>
+          <img src="assets/img/placeholder.png" data-src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index + 1}.png" alt="pokemon" class="pokebox__img lazy">
+          <img src="assets/img/pokeball.png" alt="pokeball" class="pokebox__icon">
+        </div>`
       fragment.appendChild(element)
     })
     main.appendChild(fragment)

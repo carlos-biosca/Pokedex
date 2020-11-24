@@ -142,7 +142,7 @@ body { background-color: var(--white-color); color: var(--black-color); font-wei
 
 .pokebox.isNotVisible { transform: scale(0.9); }
 
-.gotop { width: 30px; height: 30px; position: fixed; z-index: 100; background-color: var(--blue-color); bottom: 20px; right: 10px; text-align: center; padding: 14px 10px 7px 10px; border-radius: 100%; outline: none; transform: translateX(100%); pointer-events: none; transition: transform 0.35s; }
+.gotop { width: 30px; height: 30px; position: fixed; z-index: 100; background-color: var(--blue-color); bottom: 20px; right: 10px; text-align: center; padding: 14px 10px 7px 10px; border-radius: 100%; outline: none; transform: translateX(200%); pointer-events: none; transition: transform 0.35s; }
 
 .gotop img { width: 60%; pointer-events: none; }
 
