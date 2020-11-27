@@ -1,36 +1,18 @@
 .topbar {
-  height: 10vh;
+  height: 8vh;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   position: sticky;
   top: 0;
-  z-index: 100;
   background-color: $white-color;
+  z-index: 100;
 
   &__input {
     outline: none;
-    width: 50%;
+    width: 45%;
     padding: 0.5rem;
-    margin-left: 12px;
-  }
-
-  &__button {
-    height: 30px;
-    width: 30px;
-    margin-right: 10px;
-    background: url("../assets/icons/sliders.svg");
-    background-color: transparent;
-    border: none;
-    z-index: 101;
-  }
-
-  &__img {
-    position: fixed;
-    height: 300px;
-    right: -124px;
-    filter: invert(87%) sepia(8%) saturate(265%) hue-rotate(186deg)
-      brightness(100%) contrast(100%);
+    margin-left: 10px;
+    border-radius: 20px;
   }
 }

@@ -4,8 +4,9 @@ block top
 
     #topbar.topbar
       input(type="text" name="search" placeholder="Search Pokemon" id="search").topbar__input
-      button(type="button")#sliders.topbar__button 
-      img(src="assets/img/pokeball.png", alt="pokeball").topbar__img
+    #slider.slider
+      button(type="button")#slider-button.slider__button 
+      img(src="assets/img/pokeball.png", alt="pokeball")#slider-img.slider__img
 
     .title
       h1 Pokedex
@@ -22,123 +23,21 @@ block main
       //-     img(src="assets/img/pokemon1.png" alt="pokemon").pokebox__img
       //-     img(src="assets/img/pokeball.png").pokebox__icon
             
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(src="assets/img/pokemon4.png" alt="pokemon").pokebox__img
-      //-     img(src="assets/img/pokeball.png").pokebox__icon
-          
-            
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(src="assets/img/pokemon7.png" alt="pokemon").pokebox__img
-      //-     img(src="assets/img/pokeball.png").pokebox__icon
-            
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(src="assets/img/pokemon10.png" alt="pokemon").pokebox__img
-      //-     img(src="assets/img/pokeball.png").pokebox__icon
-            
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(src="assets/img/pokemon25.png" alt="pokemon").pokebox__img
-      //-     img(src="assets/img/pokeball.png").pokebox__icon
-            
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(src="assets/img/pokemon30.png" alt="pokemon").pokebox__img
-      //-     img(src="assets/img/pokeball.png").pokebox__icon
-            
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(src="assets/img/pokemon35.png" alt="pokemon").pokebox__img
-      //-     img(src="assets/img/pokeball.png").pokebox__icon
-            
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(src="assets/img/pokemon45.png" alt="pokemon").pokebox__img
-      
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(src="assets/img/pokemon50.png" alt="pokemon").pokebox__img
-      
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(src="assets/img/pokemon1.png" alt="pokemon").pokebox__img
-          
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(src="assets/img/pokemon50.png" alt="pokemon").pokebox__img
-
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(src="assets/img/pokemon1.png" alt="pokemon").pokebox__img
-
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(src="assets/img/pokemon50.png" alt="pokemon").pokebox__img
-      
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(src="assets/img/pokemon1.png" alt="pokemon").pokebox__img
-
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(src="assets/img/pokemon100.png" alt="pokemon" loading="lazy").pokebox__img
-      
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(src="assets/img/pokemon101.png" alt="pokemon" loading="lazy").pokebox__img
-
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(src="assets/img/pokemon102.png" alt="pokemon" loading="lazy").pokebox__img
-      
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(loading="lazy" src="assets/img/pokemon110.png" alt="pokemon" ).pokebox__img
-
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(loading="lazy" src="assets/img/pokemon120.png" alt="pokemon").pokebox__img
       
     a(href="#")#gotop.gotop
       img(src="assets/icons/arrow.svg")
 
     #modal.modal
+      form#radio-group.radio
+        p.radio__title Sort By:
+        .radio__options
+          input(type="radio" id="number" name="sort" value="number" checked).radio__input
+          label(for="number").radio__label Number 
+          input(type="radio" id="name" name="sort" value="name").radio__input
+          label(for="name").radio__label Name 
+          input(type="radio" id="favorites" name="sort" value="favorites").radio__input
+          label(for="favorites").radio__label Favorites 
+
+
+      
         

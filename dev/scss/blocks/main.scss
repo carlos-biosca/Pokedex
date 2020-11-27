@@ -1,8 +1,10 @@
 .main {
-  background-color: $white-color;
+  background-color: $pure-color;
   display: grid;
+  gap: 0.3rem;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: center;
-  padding: 0.5rem 0 0 0;
+  padding: 0.3rem;
+  border-bottom: 3px solid $black-color;
 }

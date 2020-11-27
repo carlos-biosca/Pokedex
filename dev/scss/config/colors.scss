@@ -1,19 +1,25 @@
 :root {
+  --pure-color: #ffffff;
   --white-color: #f0f2f6;
   --grey-color: #aab3c7;
   --soft-color: #dde2f0;
   --dark-color: #a2a2a2;
+  --pokedex-color: #db0d31;
   --red-color: #f42a28;
   --green-color: #14a06f;
   --blue-color: #37a5c6;
   --black-color: #000000;
+  --yellow-color: #ffd86f;
 }
 
+$pure-color: var(--pure-color);
 $white-color: var(--white-color);
-$grey-color: var(--grey-color);
+$grey-color: #a0a6b5;
 $soft-color: var(--soft-color);
 $dark-color: var(--dark-color);
+$pokedex-color: var(--pokedex-color);
 $red-color: var(--red-color);
 $green-color: var(--green-color);
 $blue-color: var(--blue-color);
-$black-color: var(--black-color);
+$black-color: #000000;
+$yellow-color: #ffd86f;

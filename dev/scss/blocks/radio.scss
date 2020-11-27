@@ -1,0 +1,30 @@
+.radio {
+  width: 100%;
+
+  &__title {
+    margin: 0 0 0.8rem 0;
+    font-size: 1.5rem;
+    color: $black-color;
+  }
+
+  &__options {
+    border: solid 3px lighten($color: $yellow-color, $amount: 20%);
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__input:checked + label {
+    background: lighten($color: $yellow-color, $amount: 20%);
+  }
+
+  &__label {
+    font-size: 1rem;
+    font-weight: $font-bold;
+    color: $black-color;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: $font-bold;
+    padding: 8px 10px;
+  }
+}

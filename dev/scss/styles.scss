@@ -5,6 +5,7 @@
 //Mixins
 @import "mixins/breakpoints";
 @import "mixins/reset-list";
+@import "mixins/reset-radio";
 
 //Estilos base
 @import "base/normalize";
@@ -16,3 +17,6 @@
 @import "blocks/main";
 @import "blocks/pokebox";
 @import "blocks/scroll";
+@import "blocks/modal";
+@import "blocks/slider";
+@import "blocks/radio";

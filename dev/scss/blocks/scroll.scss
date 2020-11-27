@@ -3,7 +3,7 @@
   height: 30px;
   position: fixed;
   z-index: 100;
-  background-color: $blue-color;
+  background-color: $yellow-color;
   bottom: 20px;
   right: 10px;
   text-align: center;
@@ -11,7 +11,6 @@
   border-radius: 100%;
   outline: none;
   transform: translateX(200%);
-  pointer-events: none;
   transition: transform 0.35s;
 
   & img {
@@ -21,6 +20,5 @@
 
   &.scrollOn {
     transform: translateX(0%);
-    pointer-events: all;
   }
 }

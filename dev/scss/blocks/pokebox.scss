@@ -2,14 +2,16 @@
   background-color: $grey-color;
   margin: 5px;
   border-radius: 20px;
-  padding: 1rem 0 0 1rem;
+  padding: 0.8rem 0 0 1rem;
   position: relative;
   transition: transform 0.35s;
   transform: none;
+  box-shadow: 2px 2px 5px 0px $black-color, 2px 2px 15px 5px rgba(0, 0, 0, 0);
+
   &__name {
     margin-top: 0.2rem;
     position: absolute;
-    color: $white-color;
+    color: $black-color;
   }
   &__info {
     display: flex;
@@ -19,8 +21,8 @@
     overflow: hidden;
   }
   &__number {
-    background-color: $soft-color;
-    font-size: 0.8rem;
+    background-color: $pure-color;
+    font-size: 1rem;
     font-weight: $font-bold;
     width: 40%;
     border-radius: 10px;

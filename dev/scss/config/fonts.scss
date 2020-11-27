@@ -2,3 +2,9 @@
 $main-font: "Roboto";
 $font-regular: 400;
 $font-bold: 700;
+
+@font-face {
+  src: url("../assets/fonts/Pokemon Solid.ttf");
+  font-family: "Pokemon";
+}
+$pokemon-font: "Pokemon";

@@ -9,13 +9,27 @@
   <body>
     <div class="topbar" id="topbar">
       <input class="topbar__input" type="text" name="search" placeholder="Search Pokemon" id="search"/>
-      <button class="topbar__button" type="button" id="sliders"> </button><img class="topbar__img" src="assets/img/pokeball.png" alt="pokeball"/>
+    </div>
+    <div class="slider" id="slider">
+      <button class="slider__button" type="button" id="slider-button"> </button><img class="slider__img" src="assets/img/pokeball.png" alt="pokeball" id="slider-img"/>
     </div>
     <div class="title">
       <h1>Pokedex</h1>
     </div>
     <main class="main" id="main"></main><a class="gotop" href="#" id="gotop"><img src="assets/icons/arrow.svg"/></a>
-    <div class="modal" id="modal"></div>
+    <div class="modal" id="modal">
+      <form class="radio" id="radio-group">
+        <p class="radio__title">Sort By:</p>
+        <div class="radio__options">
+          <input class="radio__input" type="radio" id="number" name="sort" value="number" checked="checked"/>
+          <label class="radio__label" for="number">Number </label>
+          <input class="radio__input" type="radio" id="name" name="sort" value="name"/>
+          <label class="radio__label" for="name">Name </label>
+          <input class="radio__input" type="radio" id="favorites" name="sort" value="favorites"/>
+          <label class="radio__label" for="favorites">Favorites </label>
+        </div>
+      </form>
+    </div>
     <script src="js/scripts-min.js"></script>
   </body>
 </html>
