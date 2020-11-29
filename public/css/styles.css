@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap");
-:root { --pure-color: #ffffff; --white-color: #f0f2f6; --grey-color: #aab3c7; --soft-color: #dde2f0; --dark-color: #a2a2a2; --pokedex-color: #db0d31; --red-color: #f42a28; --green-color: #14a06f; --blue-color: #37a5c6; --black-color: #000000; --yellow-color: #ffd86f; }
+:root { --pure-color: #ffffff; --white-color: #f0f2f6; --grey-color: #c7c8ca; --red-color: #f42a28; --green-color: #14a06f; --blue-color: #37a5c6; --black-color: #000000; --yellow-color: #ffd86f; }
 
 @font-face { src: url("../assets/fonts/Pokemon Solid.ttf"); font-family: "Pokemon"; }
 
@@ -120,7 +120,7 @@ body { background-color: var(--white-color); color: #000000; font-weight: 400; m
 
 .topbar { height: 8vh; width: 100%; display: flex; align-items: flex-end; position: -webkit-sticky; position: sticky; top: 0; background-color: var(--white-color); z-index: 100; }
 
-.topbar__input { outline: none; width: 45%; padding: 0.5rem; margin-left: 10px; border-radius: 20px; }
+.topbar__input { outline: none; width: 45%; padding: 0.5rem; margin-left: 10px; border-radius: 20px; background: url("../assets/icons/search.svg") no-repeat; background-color: var(--pure-color); text-indent: 30px; }
 
 .title { position: -webkit-sticky; position: sticky; top: 8vh; z-index: 100; width: 100%; height: 10vh; font-family: "Pokemon", sans-serif; background-color: var(--white-color); border-bottom: 3px solid #000000; overflow: hidden; display: flex; align-items: stretch; }
 
@@ -128,19 +128,23 @@ body { background-color: var(--white-color); color: #000000; font-weight: 400; m
 
 @supports (-webkit-text-stroke: 1px black) { .title h1 { -webkit-text-stroke: 1px black; -webkit-text-fill-color: #ffd86f; } }
 
-.main { background-color: var(--pure-color); display: grid; gap: 0.3rem; grid-template-columns: 1fr 1fr; justify-items: center; align-items: center; padding: 0.3rem; border-bottom: 3px solid #000000; }
+.main { background-color: var(--pure-color); display: grid; gap: 0.3rem; grid-template-columns: 1fr 1fr; justify-items: center; align-items: center; padding: 0.3rem; border-bottom: 3px solid #000000; position: relative; }
 
-.pokebox { background-color: #a0a6b5; margin: 5px; border-radius: 20px; padding: 0.8rem 0 0 1rem; position: relative; transition: transform 0.35s; transform: none; box-shadow: 2px 2px 5px 0px #000000, 2px 2px 15px 5px rgba(0, 0, 0, 0); }
+.main__content { display: none; min-height: 40vh; grid-column: 1/-1; align-items: center; }
 
-.pokebox__name { margin-top: 0.2rem; position: absolute; color: #000000; }
+.main__content p { font-size: 2rem; font-weight: 700; }
 
-.pokebox__info { display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; }
+.main__content.empty { display: flex; }
 
-.pokebox__number { background-color: var(--pure-color); font-size: 1rem; font-weight: 700; width: 40%; border-radius: 10px; text-align: center; padding: 0.2rem 0; }
+.pokebox { background-color: var(--white-color); margin: 5px; position: relative; padding-top: 1rem; transition: transform 0.35s; transform: none; box-shadow: 2px 2px 5px 0px #000000, 2px 2px 15px 5px rgba(0, 0, 0, 0.1); overflow: hidden; max-width: 165px; }
 
-.pokebox__img { width: 50%; transform: scale(0.8); z-index: 10; }
+.pokebox__img { width: 100%; z-index: 10; position: relative; }
 
-.pokebox__icon { position: absolute; width: 70%; height: 100%; right: -20px; bottom: -10px; filter: invert(92%) sepia(20%) saturate(408%) hue-rotate(185deg) brightness(99%) contrast(89%); }
+.pokebox__icon { position: absolute; height: 100%; right: -113px; top: -72px; }
+
+.pokebox__number { position: absolute; top: 0; font-size: 1rem; font-weight: 700; width: 30%; text-align: center; padding: 8px 10px 8px 0; }
+
+.pokebox__name { color: #000000; background-color: #c7c8ca; padding: 1rem 0; font-size: 1.5rem; text-align: center; }
 
 .pokebox.isNotVisible { transform: scale(0.9); }
 
@@ -150,7 +154,7 @@ body { background-color: var(--white-color); color: #000000; font-weight: 400; m
 
 .gotop.scrollOn { transform: translateX(0%); }
 
-.modal { background-color: #ffd86f; position: fixed; box-sizing: border-box; top: 0; left: 0; width: 100%; height: 18vh; z-index: 150; padding: 1rem 0 0 1rem; transform: translateY(-110%); transition: transform 0.35s; }
+.modal { background-color: #ffd86f; position: fixed; top: 0; left: 0; width: 100%; height: 18vh; z-index: 150; transform: translateY(-100%); transition: transform 0.35s; display: flex; align-items: center; }
 
 .modal.isActive { transform: translateY(0); }
 
@@ -166,10 +170,10 @@ body { background-color: var(--white-color); color: #000000; font-weight: 400; m
 
 .radio { width: 100%; }
 
-.radio__title { margin: 0 0 0.8rem 0; font-size: 1.5rem; color: #000000; }
+.radio__title { margin: 0 0 0.8rem 10vw; font-size: 1.5rem; color: #000000; }
 
-.radio__options { border: solid 3px #fff4d5; display: inline-block; border-radius: 10px; overflow: hidden; }
+.radio__options { border: solid 3px #fff4d5; display: inline-block; border-radius: 10px; overflow: hidden; margin-left: 10vw; }
 
-.radio__input:checked + label { background: #fff4d5; }
+.radio__input:checked + input + input + label, .radio__input:checked + input + label + label, .radio__input:checked + label + label + label { background: #fff4d5; }
 
-.radio__label { font-size: 1rem; font-weight: 700; color: #000000; display: inline-block; cursor: pointer; font-weight: 700; padding: 8px 10px; }
+.radio__label { font-size: 1rem; font-weight: 700; text-transform: capitalize; color: #000000; display: inline-block; cursor: pointer; font-weight: 700; padding: 8px 10px; min-width: 60px; text-align: center; }

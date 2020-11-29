@@ -1,3 +1,5 @@
+const mainContent = document.getElementById('main-content')
+
 const isElementInViewport = (el) => {
   const rect = el.getBoundingClientRect();
   // console.log(rect);
@@ -24,8 +26,8 @@ const scrollOn = () => {
   } else {
     gotop.classList.remove('scrollOn')
   }
+  isCardVisible()
 }
 
 window.addEventListener("scroll", scrollOn);
-window.addEventListener("scroll", isCardVisible);
 window.addEventListener("resize", isCardVisible);

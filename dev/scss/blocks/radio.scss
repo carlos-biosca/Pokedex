@@ -2,7 +2,7 @@
   width: 100%;
 
   &__title {
-    margin: 0 0 0.8rem 0;
+    margin: 0 0 0.8rem 10vw;
     font-size: 1.5rem;
     color: $black-color;
   }
@@ -12,19 +12,25 @@
     display: inline-block;
     border-radius: 10px;
     overflow: hidden;
+    margin-left: 10vw;
   }
 
-  &__input:checked + label {
+  &__input:checked + input + input + label,
+  &__input:checked + input + label + label,
+  &__input:checked + label + label + label {
     background: lighten($color: $yellow-color, $amount: 20%);
   }
 
   &__label {
     font-size: 1rem;
     font-weight: $font-bold;
+    text-transform: capitalize;
     color: $black-color;
     display: inline-block;
     cursor: pointer;
     font-weight: $font-bold;
     padding: 8px 10px;
+    min-width: 60px;
+    text-align: center;
   }
 }

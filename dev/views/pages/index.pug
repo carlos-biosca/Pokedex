@@ -3,7 +3,8 @@ extends ../templates/template.pug
 block top
 
     #topbar.topbar
-      input(type="text" name="search" placeholder="Search Pokemon" id="search").topbar__input
+      input(type="text" name="search" placeholder="Name/#000" id="search").topbar__input
+    
     #slider.slider
       button(type="button")#slider-button.slider__button 
       img(src="assets/img/pokeball.png", alt="pokeball")#slider-img.slider__img
@@ -14,15 +15,8 @@ block top
 block main
 
     main#main.main
-
-      
-      //- .pokebox#pokebox
-      //-   .pokebox__name Pokemon
-      //-   .pokebox__info
-      //-     .pokebox__number#pokenumber #001
-      //-     img(src="assets/img/pokemon1.png" alt="pokemon").pokebox__img
-      //-     img(src="assets/img/pokeball.png").pokebox__icon
-            
+      #main-content.main__content 
+        p No Matches
       
     a(href="#")#gotop.gotop
       img(src="assets/icons/arrow.svg")
@@ -32,11 +26,9 @@ block main
         p.radio__title Sort By:
         .radio__options
           input(type="radio" id="number" name="sort" value="number" checked).radio__input
-          label(for="number").radio__label Number 
           input(type="radio" id="name" name="sort" value="name").radio__input
-          label(for="name").radio__label Name 
           input(type="radio" id="favorites" name="sort" value="favorites").radio__input
-          label(for="favorites").radio__label Favorites 
+          +labels(radio)
 
 
       

@@ -7,4 +7,21 @@
   align-items: center;
   padding: 0.3rem;
   border-bottom: 3px solid $black-color;
+  position: relative;
+
+  &__content {
+    display: none;
+    min-height: 40vh;
+    grid-column: 1/-1;
+    align-items: center;
+
+    & p {
+      font-size: 2rem;
+      font-weight: $font-bold;
+    }
+
+    &.empty {
+      display: flex;
+    }
+  }
 }

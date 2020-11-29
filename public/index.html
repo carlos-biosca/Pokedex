@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="topbar" id="topbar">
-      <input class="topbar__input" type="text" name="search" placeholder="Search Pokemon" id="search"/>
+      <input class="topbar__input" type="text" name="search" placeholder="Name/#000" id="search"/>
     </div>
     <div class="slider" id="slider">
       <button class="slider__button" type="button" id="slider-button"> </button><img class="slider__img" src="assets/img/pokeball.png" alt="pokeball" id="slider-img"/>
@@ -16,17 +16,21 @@
     <div class="title">
       <h1>Pokedex</h1>
     </div>
-    <main class="main" id="main"></main><a class="gotop" href="#" id="gotop"><img src="assets/icons/arrow.svg"/></a>
+    <main class="main" id="main">
+      <div class="main__content" id="main-content"> 
+        <p>No Matches</p>
+      </div>
+    </main><a class="gotop" href="#" id="gotop"><img src="assets/icons/arrow.svg"/></a>
     <div class="modal" id="modal">
       <form class="radio" id="radio-group">
         <p class="radio__title">Sort By:</p>
         <div class="radio__options">
           <input class="radio__input" type="radio" id="number" name="sort" value="number" checked="checked"/>
-          <label class="radio__label" for="number">Number </label>
           <input class="radio__input" type="radio" id="name" name="sort" value="name"/>
-          <label class="radio__label" for="name">Name </label>
           <input class="radio__input" type="radio" id="favorites" name="sort" value="favorites"/>
-          <label class="radio__label" for="favorites">Favorites </label>
+          <label class="radio__label" for="number">number</label>
+          <label class="radio__label" for="name">name</label>
+          <label class="radio__label" for="favorites">favorites</label>
         </div>
       </form>
     </div>
