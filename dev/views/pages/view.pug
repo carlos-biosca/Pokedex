@@ -3,32 +3,33 @@ extends ../templates/template.pug
 block top
 
     #top-icons.top-icons
-      #icon-arrow.top-icons__arrow
-      #icon-heart.top-icons__heart
+      #icon-arrow.top-icons__arrow hello
+      #icon-heart.top-icons__heart there
 
 block main
 
-    main
-      .pokeview#pokeview
+    #pokeview.pokeview
+      h1#pokename
+      img(src="", alt="Pokemon")#pokeimg
+    #pokestats.pokestats
+      #tap-bar.tap-bar
+        +list(tabs)
+      //- #statsbox.stats-box
+        
+      //-   .stats-box__about
+      //-     +list(about)
+      //-     h2 Breeding
+      //-     +list(breeding)
 
-      
-      poke__stats#pokestats
-        #tap-bar.tap-bar
-          +list(tabs)
-        #statsbox.stats-box
-          
-          .stats-box__about
-            +list(about)
-            h2 Breeding
-            +list(breeding)
+      //-   .stats-box__stats
+      //-     +list(stats)
+      //-       h4 50
+      //-       progress(value="50" max="100")
 
-          .stats-box__stats
-            +list(stats)
-              h4 50
-              progress(value="50" max="100")
+      //-     h2 Type Defenses
+      //-     p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ullam deserunt facere iure deleniti nemo distinctio nobis eveniet laboriosam amet.
 
-            h2 Type Defenses
-            p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ullam deserunt facere iure deleniti nemo distinctio nobis eveniet laboriosam amet.
-
+block script
+  script(src="js/view.js")
       
       

@@ -5,8 +5,9 @@ const sass = require("gulp-sass")
 const babel = require("gulp-babel")
 const autoprefixer = require("gulp-autoprefixer")
 const concat = require("gulp-concat")
-const uglify = require("gulp-uglify")
-const plumber = require("gulp-plumber")
+const uglify = require('gulp-uglify')
+const plumber = require('gulp-plumber')
+const stripCssComments = require('gulp-strip-css-comments')
 
 //Constante para el modulo de recarga automática del sitio web al hacer cambios
 const browserSync = require('browser-sync')
@@ -35,6 +36,7 @@ gulp.task("styles", () => {
     .pipe(
       autoprefixer()
     )
+    .pipe(stripCssComments())
     .pipe(gulp.dest('./public/css'))
     .pipe(server.stream())
 })
@@ -45,9 +47,20 @@ gulp.task("babel", () => {
     .src("./dev/js/*.js")
     .pipe(plumber())
     .pipe(
-      babel({ presets: [ "@babel/preset-env" ] })
+      babel({ presets: ["@babel/preset-env"] })
     )
     .pipe(concat("scripts-min.js"))
+    .pipe(uglify())
+    .pipe(gulp.dest("./public/js/"))
+})
+
+gulp.task("pages", () => {
+  return gulp
+    .src("./dev/js/pages/*.js")
+    .pipe(plumber())
+    .pipe(
+      babel({ presets: ["@babel/preset-env"] })
+    )
     .pipe(uglify())
     .pipe(gulp.dest("./public/js/"))
 })
@@ -67,4 +80,5 @@ gulp.task('default', () => {
 
   //JS
   gulp.watch("./dev/js/*.js", gulp.series('babel')).on('change', server.reload)
+  gulp.watch("./dev/js/pages/*.js", gulp.series('pages')).on('change', server.reload)
 })

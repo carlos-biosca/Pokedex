@@ -1,0 +1,18 @@
+.top-icons {
+  background-color: red;
+  height: 10vh;
+}
+
+.pokeview {
+  background-color: green;
+  height: 40vh;
+}
+
+.pokestats {
+  background-color: blue;
+  height: 50vh;
+}
+
+ul {
+  @include reset-list;
+}

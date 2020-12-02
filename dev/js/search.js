@@ -1,4 +1,5 @@
 const inputValue = document.getElementById('search')
+const mainContent = document.getElementById('main-content')
 
 const filterNames = () => {
   const value = inputValue.value.toUpperCase()

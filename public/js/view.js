@@ -1,0 +1,1 @@
+"use strict";document.addEventListener("DOMContentLoaded",function(){var e=JSON.parse(localStorage.getItem("pokemon")),t=localStorage.getItem("imgData");renderData(e,t)});var renderData=function(e,t){document.getElementById("pokename").innerHTML=e.name,document.getElementById("pokeimg").src="data:image/png;base64,"+t};

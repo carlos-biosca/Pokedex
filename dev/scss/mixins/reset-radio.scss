@@ -1,4 +1,4 @@
-input[type="radio"] {
+@mixin reset-radio {
   position: absolute;
   visibility: hidden;
   display: none;

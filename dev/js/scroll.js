@@ -1,5 +1,3 @@
-const mainContent = document.getElementById('main-content')
-
 const isElementInViewport = (el) => {
   const rect = el.getBoundingClientRect();
   // console.log(rect);
