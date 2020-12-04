@@ -1,0 +1,19 @@
+.top-icons {
+  box-sizing: border-box;
+  display: flex;
+  height: 15vh;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 1rem;
+  background-color: transparent;
+
+  &__arrow {
+    @include buttons("../assets/icons/left-arrow.svg");
+  }
+
+  &__heart {
+    @include buttons("../assets/icons/heart.svg");
+  }
+}

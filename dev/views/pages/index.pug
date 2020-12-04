@@ -6,7 +6,7 @@ block top
       input(type="text" name="search" placeholder="Name/#000" id="search").topbar__input
     
     #slider.slider
-      button(type="button")#slider-button.slider__button 
+      button(type="button" tabindex="0")#slider-button.slider__button 
       img(src="assets/img/pokeball.png", alt="pokeball")#slider-img.slider__img
 
     .title
@@ -24,10 +24,10 @@ block main
     #modal.modal
       form#radio-group.radio
         p.radio__title Sort By:
-        .radio__options
-          input(type="radio" id="number" name="sort" value="number" checked).radio__input
-          input(type="radio" id="name" name="sort" value="name").radio__input
-          input(type="radio" id="favorites" name="sort" value="favorites").radio__input
+        #radio-options.radio__options
+          input(type="radio" id="number" name="sort" value="number" tabindex="0" checked).radio__input
+          input(type="radio" id="name" name="sort" value="name" tabindex="0").radio__input
+          input(type="radio" id="favorites" name="sort" value="favorites" tabindex="0").radio__input
           +labels(radio)
 
 block script

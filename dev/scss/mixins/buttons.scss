@@ -1,0 +1,7 @@
+@mixin buttons($url) {
+  background: url(#{$url}) no-repeat;
+  width: 30px;
+  height: 30px;
+  border: none;
+  padding: 1rem;
+}

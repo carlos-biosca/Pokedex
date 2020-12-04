@@ -1,0 +1,30 @@
+.pokeinfo {
+  height: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &__type h1 {
+    margin: 0;
+    text-transform: capitalize;
+  }
+
+  &__type span {
+    display: inline-block;
+    width: 40%;
+    background-color: lighten($white-color, 20%);
+    border-radius: 20px;
+    padding: 0.3rem 0.15rem;
+    text-align: center;
+    font-size: 0.7rem;
+    margin: 3px;
+    text-transform: capitalize;
+  }
+
+  &__number {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

@@ -5,9 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 const renderData = (data, dataImage) => {
-  const name = document.getElementById('pokename')
-  name.innerHTML = data.name
-  const loadImg = document.getElementById('pokeimg');
-  loadImg.src = "data:image/png;base64," + dataImage;
+  console.log(data)
+  renderInfo(data, dataImage)
+  renderColor(data.types[0].type.name)
 }
 

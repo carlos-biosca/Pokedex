@@ -15,14 +15,14 @@
     margin-left: 10vw;
   }
 
-  &__input[type="radio"] {
+  &__input {
     @include reset-radio;
-  }
 
-  &__input:checked + input + input + label,
-  &__input:checked + input + label + label,
-  &__input:checked + label + label + label {
-    background: lighten($color: $yellow-color, $amount: 20%);
+    &:checked + input + input + label,
+    &:checked + input + label + label,
+    &:checked + label + label + label {
+      background: lighten($color: $yellow-color, $amount: 20%);
+    }
   }
 
   &__label {

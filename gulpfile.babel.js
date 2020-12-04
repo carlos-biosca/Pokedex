@@ -30,7 +30,7 @@ gulp.task("styles", () => {
     .pipe(plumber())
     .pipe(
       sass({
-        outputStyle: "compact"
+        outputStyle: "compressed"
       })
     )
     .pipe(
@@ -61,6 +61,7 @@ gulp.task("pages", () => {
     .pipe(
       babel({ presets: ["@babel/preset-env"] })
     )
+    .pipe(concat("view.js"))
     .pipe(uglify())
     .pipe(gulp.dest("./public/js/"))
 })

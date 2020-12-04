@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(response => response.json())
       .then(data => {
         renderData(data)
-        isCardVisible()
+        filterNames()
+        sortOption()
         lazy()
         getLinks()
       })
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let element = document.createElement('div')
       element.classList.add('pokebox')
       element.id = 'pokebox'
+      element.tabIndex = 0
       let id = (index + 1).toString().padStart(3, '0')
       let name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
       element.innerHTML = `

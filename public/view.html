@@ -8,20 +8,42 @@
   </head>
   <body>
     <div class="top-icons" id="top-icons">
-      <div class="top-icons__arrow" id="icon-arrow">hello</div>
-      <div class="top-icons__heart" id="icon-heart">there</div>
+      <button class="top-icons__arrow" alt="arrow" tabindex="0" id="icon-arrow"> </button>
+      <button class="top-icons__heart" alt="heart" tabindex="0" id="icon-heart"></button>
     </div>
-    <div class="pokeview" id="pokeview">
-      <h1 id="pokename"></h1><img src="" alt="Pokemon" id="pokeimg"/>
-    </div>
-    <div class="pokestats" id="pokestats">
+    <div id="main">
+      <div class="pokeinfo" id="pokeinfo">
+        <div class="pokeinfo__type" id="basicinfo">
+          <h1 id="pokename"> </h1>
+        </div>
+        <div class="pokeinfo__number" id="numberinfo">
+          <p id="pokenumber"> </p>
+        </div>
+      </div>
+      <div class="pokeimg" id="pokeimg"><img src="" alt="Pokemon" id="pokedataimg"/></div>
       <div class="tap-bar" id="tap-bar">
-        <ul>
-          <li>About</li>
-          <li>Base Stats</li>
-          <li>Evolution</li>
-          <li>Moves</li>
-        </ul>
+        <input class="tap-bar__input" type="radio" name="item" checked="checked" id="section1"/>
+        <input class="tap-bar__input" type="radio" name="item" id="section2"/>
+        <input class="tap-bar__input" type="radio" name="item" id="section3"/>
+        <input class="tap-bar__input" type="radio" name="item" id="section4"/>
+        <div class="tap-bar__labels">
+          <label class="tap-bar__label" for="section1" tabindex="0">About</label>
+          <label class="tap-bar__label" for="section2" tabindex="0">Base Stats</label>
+          <label class="tap-bar__label" for="section3" tabindex="0">Evolution</label>
+          <label class="tap-bar__label" for="section4" tabindex="0">Moves</label>
+        </div>
+        <section class="tap-bar__section">
+          <h1>About</h1>
+        </section>
+        <section class="tap-bar__section">
+          <h1>Base Stats</h1>
+        </section>
+        <section class="tap-bar__section">
+          <h1>Evolution</h1>
+        </section>
+        <section class="tap-bar__section">
+          <h1>Moves</h1>
+        </section>
       </div>
     </div>
     <script src="js/view.js"></script>
