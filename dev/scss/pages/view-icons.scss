@@ -15,5 +15,13 @@
 
   &__heart {
     @include buttons("../assets/icons/heart.svg");
+
+    &.isActive {
+      @include buttons("../assets/icons/full-heart.svg");
+    }
+
+    &:active {
+      transform: scale(1.2);
+    }
   }
 }

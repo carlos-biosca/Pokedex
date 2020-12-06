@@ -1,12 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const data = JSON.parse(localStorage.getItem('pokemon'))
-  var dataImage = localStorage.getItem('imgData');
-  renderData(data, dataImage)
+  const data = JSON.parse(localStorage.getItem('pokemonView'))
+  const dataImage = localStorage.getItem('imgView');
+  let favorites = JSON.parse(localStorage.getItem('favorites'));
+  renderInfo(data, dataImage, favorites)
+  renderColor(data.types[0].type.name)
 })
 
-const renderData = (data, dataImage) => {
-  console.log(data)
-  renderInfo(data, dataImage)
-  renderColor(data.types[0].type.name)
-}
 

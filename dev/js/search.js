@@ -1,5 +1,23 @@
 const inputValue = document.getElementById('search')
+const modalFavorites = document.getElementById('favorites')
 const mainContent = document.getElementById('main-content')
+
+
+const filterFavorites = (e) => {
+  e.target.classList.toggle('isActive')
+  const boxes = document.querySelectorAll("#pokebox")
+  if (e.target.classList.contains('isActive')) {
+    boxes.forEach(box => {
+      box.lastElementChild.classList.contains("isFavorite") ? box.style.display = 'block' : box.style.display = 'none';
+    })
+    e.target.innerHTML = 'ON'
+  } else {
+    boxes.forEach(box => box.style.display = 'block')
+    e.target.innerHTML = 'Favorites'
+  }
+  isCardVisible()
+  mainIsEmpty(boxes)
+}
 
 const filterNames = () => {
   const value = inputValue.value.toUpperCase()
@@ -31,3 +49,4 @@ const mainIsEmpty = (boxes) => {
 }
 
 inputValue.addEventListener('keyup', filterNames)
+modalFavorites.addEventListener('click', (e) => filterFavorites(e))

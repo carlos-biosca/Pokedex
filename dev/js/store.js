@@ -13,14 +13,14 @@ const getBase64Image = (img) => {
 
 const loadImage = (img) => {
   const imgData = getBase64Image(img);
-  localStorage.setItem("imgData", imgData);
+  localStorage.setItem("imgView", imgData);
 }
 
 const loadPokemon = (url) => {
   fetch(`${url}`)
     .then(response => response.json())
     .then(data => {
-      localStorage.setItem("pokemon", JSON.stringify(data))
+      localStorage.setItem("pokemonView", JSON.stringify(data))
     })
     .then(() => {
       window.location = "view.html"

@@ -47,9 +47,6 @@ const sortOption = () => {
     case 'name':
       sortByName(boxes)
       break
-    case 'favorites':
-      console.log(favorites);
-      break
     default:
       console.log(`Esta opción no existe: ${option}`);
       break

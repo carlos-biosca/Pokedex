@@ -10,6 +10,11 @@
     border: none;
     z-index: 201;
 
+    &:focus {
+      outline: none;
+      transform: scale(1.2);
+    }
+
     &.isActive {
       background: url("../assets/icons/close.svg") no-repeat;
       background-size: 90%;
@@ -25,9 +30,9 @@
     filter: invert(87%) sepia(34%) saturate(746%) hue-rotate(334deg)
       brightness(102%) contrast(101%) drop-shadow(1px 1px 1px rgba(0, 0, 0, 1));
     z-index: 200;
+    transition: height 0.35s;
 
     &.isActive {
-      opacity: 0;
       height: 0;
     }
   }
