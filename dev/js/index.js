@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const pokemonNumber = 50
+  const pokemonNumber = 100
 
   const loadData = () => {
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=${pokemonNumber}&offset=0`)
@@ -37,3 +37,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadData();
 })
+

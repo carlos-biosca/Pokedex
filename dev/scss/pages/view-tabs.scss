@@ -10,12 +10,12 @@
     align-items: flex-end;
     justify-content: space-around;
     background-color: $pure-color;
-    color: lighten($black-color, 60%);
+    color: lighten($color: $black-color, $amount: 40%);
     box-sizing: border-box;
     height: 10vh;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    border-bottom: 1px solid $grey-color;
+    border-bottom: 1px solid lighten($color: $black-color, $amount: 40%);
     padding: 0 1rem;
   }
 
@@ -23,27 +23,12 @@
     padding: 1.2rem 0rem;
     min-width: 70px;
     text-align: center;
-    font-size: 0.8rem;
     border-bottom: 3px solid $pure-color;
 
     &:focus {
       border-top: 3px solid $black-color;
       outline: none;
     }
-  }
-
-  &__section {
-    top: 55vh;
-    height: 45vh;
-    background-color: $pure-color;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    right: 0;
-    left: 0;
-    transition-delay: 0.5s;
-    transform: translateY(100%);
   }
 }
 

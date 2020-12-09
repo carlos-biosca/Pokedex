@@ -1,5 +1,4 @@
 const paintFavorites = (favorites) => {
-  console.log(favorites);
   const names = document.querySelectorAll('#pokename')
   names.forEach(name => {
     const index = favorites.indexOf(name.innerHTML.toLowerCase())

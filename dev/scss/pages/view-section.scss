@@ -1,0 +1,78 @@
+.section {
+  top: 55vh;
+  height: 45vh;
+  background-color: $pure-color;
+  position: fixed;
+  right: 0;
+  left: 0;
+  transition-delay: 0.5s;
+  transform: translateY(100%);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+
+  &__ul {
+    @include reset-list;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &__li {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 0.5rem 1rem;
+    text-transform: capitalize;
+  }
+
+  &__label {
+    color: lighten($color: $black-color, $amount: 40%);
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    color: $black-color;
+
+    & ul,
+    & p {
+      padding: 1rem;
+      border: 1px solid $black-color;
+      border-radius: 5px;
+    }
+
+    & ul {
+      @include reset-list;
+      padding: 1rem;
+      width: 100%;
+    }
+    & p {
+      text-transform: none;
+      margin: 0;
+    }
+
+    & span {
+      min-width: 30px;
+      text-align: center;
+    }
+    & progress {
+      margin-left: 1rem;
+      -webkit-appearance: none;
+      appearance: none;
+      color: red;
+
+      &::-webkit-progress-bar {
+        background-color: #eee;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+      }
+
+      &::-moz-progress-bar {
+        background-color: var(--color-bar);
+      }
+
+      &::-webkit-progress-value {
+        border-radius: 2px;
+        background-color: var(--color-bar);
+      }
+    }
+  }
+}

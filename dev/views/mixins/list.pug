@@ -1,6 +1,6 @@
 mixin list(items)
-  ul
+  ul.section__ul
     each item in items
-      li= item
-      if block
-        block
+      li.section__li
+        label(for=item).section__label= item
+        div(id=item).section__text 

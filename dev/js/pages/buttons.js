@@ -9,8 +9,7 @@ const removeElement = (array, elem) => {
 }
 
 arrow.addEventListener('click', () => {
-  window.history.back()
-  //Fallo al recargar en firefox
+  window.location = "index.html"
 })
 
 heart.addEventListener('click', (e) => {

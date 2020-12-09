@@ -20,13 +20,15 @@ block main
         input(type="radio" name="item" checked)#section1.tap-bar__input
         input(type="radio" name="item")#section2.tap-bar__input
         input(type="radio" name="item")#section3.tap-bar__input
-        input(type="radio" name="item")#section4.tap-bar__input
         .tap-bar__labels
-          - for(var i = 1; i < 5; i++)
+          - for(var i = 1; i < 4; i++)
               label.tap-bar__label(for='section' + i tabindex="0")= tabs[i-1]
-        each tab in tabs
-          section.tap-bar__section
-            h1= tab
+        section.section
+          include ../includes/about
+        section.section
+          include ../includes/stats
+        section.section
+          include ../includes/moves
 
 block script
   script(src="js/view.js")

@@ -1,18 +1,17 @@
 .radio {
   width: 100%;
+  margin: 0 10vw;
 
   &__title {
-    margin: 0 0 0.8rem 10vw;
+    margin: 0 0 0.8rem 0;
     font-size: 1.5rem;
     color: $black-color;
   }
 
   &__options {
-    // border: solid 3px lighten($color: $yellow-color, $amount: 20%);
     display: inline-block;
     border-radius: 10px;
     overflow: hidden;
-    margin-left: 10vw;
   }
 
   &__input {
