@@ -13,14 +13,14 @@ const getBase64Image = (img) => {
 
 const loadImage = (img) => {
   const imgData = getBase64Image(img);
-  localStorage.setItem("imgView", imgData);
+  sessionStorage.setItem("imgView", imgData);
 }
 
 const loadPokemon = (url) => {
   fetch(`${url}`)
     .then(response => response.json())
     .then(data => {
-      localStorage.setItem("pokemonView", JSON.stringify(data))
+      sessionStorage.setItem("pokemonView", JSON.stringify(data))
     })
     .then(() => {
       window.location = "view.html"
@@ -28,10 +28,26 @@ const loadPokemon = (url) => {
     .catch((err) => console.log(err));
 }
 
+const loadFilters = () => {
+  sessionStorage.setItem("input", JSON.stringify(inputValue.value))
+  const option = optionChange();
+  sessionStorage.setItem("option", JSON.stringify(option))
+}
+
+const loadInfo = (e) => {
+  loadImage(e.target.children[1]);
+  loadPokemon(e.target.dataset.url)
+  loadFilters()
+}
+
 const getLinks = () => {
-  const links = document.querySelectorAll('.pokebox__img')
+  const links = document.querySelectorAll('.pokebox')
   links.forEach(link => link.addEventListener('click', (e) => {
-    loadPokemon(e.target.dataset.url)
-    loadImage(e.target);
+    loadInfo(e)
+  }))
+  links.forEach(link => link.addEventListener('keypress', (e) => {
+    if (e.key == 'Enter') {
+      loadInfo(e)
+    }
   }))
 }

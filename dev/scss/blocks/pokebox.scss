@@ -13,6 +13,7 @@
     width: 100%;
     z-index: 10;
     position: relative;
+    pointer-events: none;
   }
 
   &__icon {
@@ -20,6 +21,7 @@
     height: 100%;
     right: -113px;
     top: -72px;
+    pointer-events: none;
   }
 
   &__number {
@@ -39,6 +41,7 @@
     padding: 1rem 0;
     font-size: 1.5rem;
     text-align: center;
+    pointer-events: none;
 
     &.isFavorite {
       background-color: $yellow-color;

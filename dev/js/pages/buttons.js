@@ -1,5 +1,6 @@
 const arrow = document.getElementById('icon-arrow')
 const heart = document.getElementById('icon-heart')
+const tap = document.querySelectorAll('.tap-bar__label')
 
 const removeElement = (array, elem) => {
   const index = array.indexOf(elem);
@@ -23,3 +24,9 @@ heart.addEventListener('click', (e) => {
   localStorage.setItem('favorites', JSON.stringify(favorites))
   e.target.classList.toggle('isActive')
 })
+
+tap.forEach(tab => tab.addEventListener('keypress', (e) => {
+  if (e.keyCode == 32) {
+    document.activeElement.click()
+  }
+}))

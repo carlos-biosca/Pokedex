@@ -1,27 +1,21 @@
 .moves-list {
   @include reset-list;
+  width: 95%;
 
   &__item {
-    background-color: $grey-color;
+    background-color: $white-color;
     padding: 0.5rem;
     margin: 1rem 1rem 0 1rem;
     text-align: center;
-    border: 3px solid $grey-color;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border: 1px solid $black-color;
     font-size: 1.5rem;
-    color: $black-color;
+    box-shadow: 2px 2px 5px 0px $black-color,
+      2px 2px 15px 5px rgba(0, 0, 0, 0.1);
 
     &:focus {
       background-color: $yellow-color;
-      border: 3px solid $yellow-color;
       outline: none;
     }
-  }
-
-  &__card,
-  &__text {
-    border: 1px solid $black-color;
   }
 
   &__card {
@@ -29,8 +23,11 @@
     padding: 0.5rem;
     margin: 0 1rem;
     display: none;
+
     &.isActive {
       display: block;
+      box-shadow: 2px 2px 5px 0px $black-color,
+        2px 2px 15px 5px rgba(0, 0, 0, 0.1);
     }
   }
 
@@ -41,7 +38,7 @@
 
   &__info {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 35% 65%;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
@@ -52,16 +49,18 @@
   }
 
   &__text {
+    border: 1px solid $black-color;
     color: lighten($color: $black-color, $amount: 40%);
     padding: 0.5rem;
     text-transform: capitalize;
     border-radius: 5px;
+    background-color: $pure-color;
 
     & p {
       color: $black-color;
-      margin: 0.5rem 0;
-      padding: 1rem;
-      background-color: $pure-color;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
       border-radius: 5px;
     }
   }

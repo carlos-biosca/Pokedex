@@ -13,6 +13,21 @@
     <div class="slider" id="slider">
       <button class="slider__button" type="button" tabindex="0" alt="sliders" id="slider-button"> </button><img class="slider__img" src="assets/img/pokeball.png" alt="pokeball" id="slider-img"/>
     </div>
+    <div class="modal" id="modal">
+      <form class="radio" id="radio-group">
+        <p class="radio__title">Sort By:
+          <div class="radio__grid">
+            <div class="radio__options" id="radio-options">
+              <input class="radio__input" type="radio" id="number" name="sort" value="number" checked="checked"/>
+              <input class="radio__input" type="radio" id="name" name="sort" value="name"/>
+              <label class="radio__label" for="number" tabIndex="0">number</label>
+              <label class="radio__label" for="name" tabIndex="0">name</label>
+            </div>
+            <button class="modal__button" type="button" id="favorites">favorites</button>
+          </div>
+        </p>
+      </form>
+    </div>
     <div class="title">
       <h1>Pokedex</h1>
     </div>
@@ -21,18 +36,6 @@
         <p>No Matches</p>
       </div>
     </main><a class="gotop" href="#" id="gotop"><img src="assets/icons/arrow.svg"/></a>
-    <div class="modal" id="modal">
-      <form class="radio" id="radio-group">
-        <p class="radio__title">Sort By:</p>
-        <div class="radio__options" id="radio-options">
-          <input class="radio__input" type="radio" id="number" name="sort" value="number" tabindex="0" checked="checked"/>
-          <input class="radio__input" type="radio" id="name" name="sort" value="name" tabindex="0"/>
-          <label class="radio__label" for="number">number</label>
-          <label class="radio__label" for="name">name</label>
-          <button class="modal__button" type="button" id="favorites">Favorites</button>
-        </div>
-      </form>
-    </div>
     <script src="js/scripts-min.js"></script>
   </body>
 </html>

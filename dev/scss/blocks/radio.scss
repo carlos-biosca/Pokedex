@@ -1,11 +1,15 @@
 .radio {
   width: 100%;
-  margin: 0 10vw;
+  margin: 0 5vw;
 
   &__title {
-    margin: 0 0 0.8rem 0;
+    margin: 0.8rem 0 0.8rem 0;
     font-size: 1.5rem;
     color: $black-color;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 65% 35%;
   }
 
   &__options {
@@ -20,20 +24,30 @@
     &:checked + input + label,
     &:checked + label + label {
       background: $pure-color;
+      border: 3px solid $pure-color;
     }
   }
 
   &__label {
+    box-sizing: border-box;
     font-size: 1rem;
     font-weight: $font-bold;
-    text-transform: capitalize;
     color: $black-color;
     display: inline-block;
-    cursor: pointer;
-    font-weight: $font-bold;
     padding: 10px;
-    min-width: 60px;
+    width: 80px;
     text-align: center;
+    border: 3px solid $yellow-color;
+
+    &:focus {
+      outline: none;
+      border: 3px solid $black-color;
+    }
+
+    &:first-of-type {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
 
     &:last-of-type {
       border-top-right-radius: 10px;

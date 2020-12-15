@@ -9,6 +9,8 @@
   transform: translateY(100%);
   overflow-y: scroll;
   scroll-behavior: smooth;
+  display: flex;
+  justify-content: center;
 
   &__ul {
     @include reset-list;
@@ -17,10 +19,32 @@
   }
 
   &__li {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    padding: 0.5rem 1rem;
-    text-transform: capitalize;
+    &--weight,
+    &--height,
+    &--color {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      padding: 0.6rem 1rem;
+      text-transform: capitalize;
+    }
+
+    &--abilities,
+    &--flavor {
+      padding: 0.6rem 1rem;
+      text-transform: capitalize;
+    }
+
+    &--HP,
+    &--Attack,
+    &--Defense,
+    &--Sp-Atk,
+    &--Sp-Def,
+    &--Speed,
+    &--Total {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      padding: 0.6rem 1rem;
+    }
   }
 
   &__label {
@@ -30,23 +54,22 @@
   &__text {
     display: flex;
     align-items: center;
-    color: $black-color;
 
     & ul,
     & p {
-      padding: 1rem;
-      border: 1px solid $black-color;
-      border-radius: 5px;
+      background-color: $white-color;
     }
 
     & ul {
       @include reset-list;
       padding: 1rem;
+      margin: 0.5rem 0 0 0;
       width: 100%;
     }
     & p {
       text-transform: none;
-      margin: 0;
+      margin: 0.5rem 0 0 0;
+      padding: 1rem;
     }
 
     & span {
@@ -57,7 +80,6 @@
       margin-left: 1rem;
       -webkit-appearance: none;
       appearance: none;
-      color: red;
 
       &::-webkit-progress-bar {
         background-color: #eee;

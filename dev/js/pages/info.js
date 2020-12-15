@@ -1,5 +1,5 @@
 const renderInfo = (data) => {
-  const dataImage = localStorage.getItem('imgView');
+  const dataImage = sessionStorage.getItem('imgView');
   let favorites = JSON.parse(localStorage.getItem('favorites'));
   const name = document.getElementById('pokename')
   name.innerHTML = data.name

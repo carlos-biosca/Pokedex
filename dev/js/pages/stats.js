@@ -1,5 +1,5 @@
 const loadStats = (data) => {
-  const stats = ['HP', 'Attack', 'Defense', 'Sp.Atk', 'Sp.Defense', 'Speed']
+  const stats = ['HP', 'Attack', 'Defense', 'Sp-Atk', 'Sp-Def', 'Speed']
   let total = 0
   stats.forEach((stats, index) => {
     const span = document.createElement('span')

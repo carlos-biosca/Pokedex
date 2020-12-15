@@ -9,6 +9,16 @@ block top
       button(type="button" tabindex="0" alt="sliders")#slider-button.slider__button 
       img(src="assets/img/pokeball.png", alt="pokeball")#slider-img.slider__img
 
+    #modal.modal
+      form#radio-group.radio
+        p.radio__title Sort By:
+          .radio__grid
+            #radio-options.radio__options
+              input(type="radio" id="number" name="sort" value="number" checked).radio__input
+              input(type="radio" id="name" name="sort" value="name").radio__input
+              +labels(radio)
+            button(type="button" id="favorites").modal__button favorites
+            
     .title
       h1 Pokedex
 
@@ -17,18 +27,10 @@ block main
     main#main.main
       #main-content.main__content 
         p No Matches
+
       
     a(href="#")#gotop.gotop
       img(src="assets/icons/arrow.svg")
-
-    #modal.modal
-      form#radio-group.radio
-        p.radio__title Sort By:
-        #radio-options.radio__options
-          input(type="radio" id="number" name="sort" value="number" tabindex="0" checked).radio__input
-          input(type="radio" id="name" name="sort" value="name" tabindex="0").radio__input
-          +labels(radio)
-          button(type="button" id="favorites").modal__button Favorites
 
 block script
   script(src="js/scripts-min.js")
