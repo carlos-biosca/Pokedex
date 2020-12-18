@@ -9,6 +9,10 @@
   padding-top: 1rem;
   background-color: transparent;
 
+  @include laptop {
+    height: 20vh;
+  }
+
   &__arrow {
     @include buttons("../assets/icons/left-arrow.svg");
   }

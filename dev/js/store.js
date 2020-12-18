@@ -32,6 +32,7 @@ const loadFilters = () => {
   sessionStorage.setItem("input", JSON.stringify(inputValue.value))
   const option = optionChange();
   sessionStorage.setItem("option", JSON.stringify(option))
+  sessionStorage.setItem("favoritesOn", JSON.stringify(favoritesOn))
 }
 
 const loadInfo = (e) => {

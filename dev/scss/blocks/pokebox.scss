@@ -8,6 +8,20 @@
   box-shadow: 2px 2px 5px 0px $black-color, 2px 2px 15px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   max-width: 165px;
+  cursor: pointer;
+
+  @include laptop {
+    max-width: 220px;
+    margin: 15px;
+
+    &:hover {
+      outline: 6px solid $black-color;
+    }
+  }
+
+  &:focus {
+    outline: 6px solid $black-color;
+  }
 
   &__img {
     width: 100%;

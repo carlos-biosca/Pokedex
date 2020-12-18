@@ -1,23 +1,7 @@
 const inputValue = document.getElementById('search')
 const modalFavorites = document.getElementById('favorites')
 const mainContent = document.getElementById('main-content')
-
-
-const filterFavorites = (e) => {
-  e.target.classList.toggle('isActive')
-  const boxes = document.querySelectorAll("#pokebox")
-  if (e.target.classList.contains('isActive')) {
-    boxes.forEach(box => {
-      box.lastElementChild.classList.contains("isFavorite") ? box.style.display = 'block' : box.style.display = 'none';
-    })
-    e.target.innerHTML = 'ON'
-  } else {
-    boxes.forEach(box => box.style.display = 'block')
-    e.target.innerHTML = 'Favorites'
-  }
-  isCardVisible()
-  mainIsEmpty(boxes)
-}
+let favoritesOn = false
 
 const filterNames = () => {
   const value = inputValue.value.toUpperCase()
@@ -26,11 +10,30 @@ const filterNames = () => {
     const name = box.lastElementChild.innerHTML
     const number = box.firstElementChild.innerHTML
     if (name.toUpperCase().indexOf(value) > -1 || number.indexOf(value) > -1) {
-      box.style.display = 'block'
+      if (favoritesOn) {
+        box.lastElementChild.classList.contains("isFavorite") ? box.style.display = 'block' : box.style.display = 'none';
+      } else {
+        box.style.display = 'block'
+      }
     } else {
       box.style.display = 'none'
     }
   })
+  isCardVisible()
+  mainIsEmpty(boxes)
+}
+
+const filterFavorites = () => {
+  const boxes = document.querySelectorAll("#pokebox")
+  if (modalFavorites.classList.contains('isActive')) {
+    boxes.forEach(box => {
+      box.lastElementChild.classList.contains("isFavorite") ? box.style.display = 'block' : box.style.display = 'none';
+    })
+    modalFavorites.innerHTML = 'ON'
+  } else {
+    boxes.forEach(box => box.style.display = 'block')
+    modalFavorites.innerHTML = 'Favorites'
+  }
   isCardVisible()
   mainIsEmpty(boxes)
 }
@@ -49,4 +52,8 @@ const mainIsEmpty = (boxes) => {
 }
 
 inputValue.addEventListener('keyup', filterNames)
-modalFavorites.addEventListener('click', (e) => filterFavorites(e))
+modalFavorites.addEventListener('click', () => {
+  favoritesOn = !favoritesOn
+  modalFavorites.classList.toggle('isActive')
+  filterFavorites()
+})

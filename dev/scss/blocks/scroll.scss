@@ -13,6 +13,12 @@
   transform: translateX(200%);
   transition: transform 0.35s;
 
+  @include desktop {
+    width: 50px;
+    height: 50px;
+    right: 20px;
+  }
+
   & img {
     width: 60%;
     pointer-events: none;

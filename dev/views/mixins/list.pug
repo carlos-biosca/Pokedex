@@ -1,6 +1,6 @@
 mixin list(items)
-  ul.section__ul
+  ul(tabIndex="0").section__ul
     each item in items
-      li(class= "section__li--"+item)
+      li(class= "section__li section__li--"+item )
         label(for=item).section__label= item
         div(id=item).section__text 

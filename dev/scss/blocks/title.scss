@@ -1,18 +1,13 @@
 .title {
-  position: sticky;
-  top: 8vh;
-  z-index: 100;
   width: 100%;
   height: 10vh;
   font-family: $pokemon-font, sans-serif;
-  background-color: $white-color;
   border-bottom: 3px solid $black-color;
   overflow: hidden;
-  display: flex;
-  align-items: stretch;
 
   & h1 {
-    font-size: 2.2rem;
+    font-size: 2.7rem;
+    height: 100%;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 15px;
@@ -20,6 +15,16 @@
     letter-spacing: 0.2rem;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
       1px 1px 0 $black-color;
+
+    @include tablet {
+      margin-left: 40px;
+      font-size: 3rem;
+    }
+
+    @include laptop {
+      margin-left: 70px;
+      font-size: 3.5rem;
+    }
   }
 
   @supports (-webkit-text-stroke: 1px black) {

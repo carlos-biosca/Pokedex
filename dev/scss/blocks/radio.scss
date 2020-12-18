@@ -2,10 +2,22 @@
   width: 100%;
   margin: 0 5vw;
 
+  @include tablet {
+    margin: 0 8vw;
+  }
+
   &__title {
     margin: 0.8rem 0 0.8rem 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: $black-color;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+
+    @include laptop {
+      font-size: 2.5rem;
+    }
   }
   &__grid {
     display: grid;
@@ -38,6 +50,16 @@
     width: 80px;
     text-align: center;
     border: 3px solid $yellow-color;
+    cursor: pointer;
+
+    @include laptop {
+      font-size: 1.3rem;
+      width: 120px;
+
+      &:hover {
+        border: 3px solid $black-color;
+      }
+    }
 
     &:focus {
       outline: none;

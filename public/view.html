@@ -7,20 +7,24 @@
     <title>Pokedex</title>
   </head>
   <body>
-    <div class="top-icons" id="top-icons">
-      <button class="top-icons__arrow" alt="arrow" tabindex="0" id="icon-arrow"> </button>
-      <button class="top-icons__heart" alt="heart" tabindex="0" id="icon-heart"></button>
-    </div>
-    <div id="main">
-      <div class="pokeinfo" id="pokeinfo">
-        <div class="pokeinfo__type" id="basicinfo">
-          <h1 id="pokename"> </h1>
+    <div class="grid-content">
+      <div class="top-block" id="top-block">
+        <div class="top-icons" id="top-icons">
+          <button class="top-icons__arrow" alt="arrow" tabindex="0" id="icon-arrow"> </button>
+          <button class="top-icons__heart" alt="heart" tabindex="0" id="icon-heart"></button>
         </div>
-        <div class="pokeinfo__number" id="numberinfo">
-          <p id="pokenumber"> </p>
+        <div class="top-view" id="top-view">
+          <div class="pokeinfo" id="pokeinfo">
+            <div class="pokeinfo__type" id="basicinfo">
+              <h1 id="pokename"> </h1>
+            </div>
+            <div class="pokeinfo__number" id="numberinfo">
+              <p id="pokenumber"> </p>
+            </div>
+          </div>
+          <div class="pokeimg" id="pokeimg"><img src="" alt="Pokemon" id="pokedataimg"/></div>
         </div>
       </div>
-      <div class="pokeimg" id="pokeimg"><img src="" alt="Pokemon" id="pokedataimg"/></div>
       <div class="tap-bar" id="tap-bar">
         <input class="tap-bar__input" type="radio" name="item" checked="checked" id="section1"/>
         <input class="tap-bar__input" type="radio" name="item" id="section2"/>
@@ -31,56 +35,56 @@
           <label class="tap-bar__label" for="section3" tabindex="0">Moves</label>
         </div>
         <section class="section">
-          <ul class="section__ul">
-            <li class="section__li--height">
+          <ul class="section__ul" tabIndex="0">
+            <li class="section__li section__li--height">
               <label class="section__label" for="height">height</label>
               <div class="section__text" id="height"> </div>
             </li>
-            <li class="section__li--weight">
+            <li class="section__li section__li--weight">
               <label class="section__label" for="weight">weight</label>
               <div class="section__text" id="weight"> </div>
             </li>
-            <li class="section__li--color">
+            <li class="section__li section__li--color">
               <label class="section__label" for="color">color</label>
               <div class="section__text" id="color"> </div>
             </li>
-            <li class="section__li--abilities">
+            <li class="section__li section__li--abilities">
               <label class="section__label" for="abilities">abilities</label>
               <div class="section__text" id="abilities"> </div>
             </li>
-            <li class="section__li--flavor text">
+            <li class="section__li section__li--flavor text">
               <label class="section__label" for="flavor text">flavor text</label>
               <div class="section__text" id="flavor text"> </div>
             </li>
           </ul>
         </section>
         <section class="section">
-          <ul class="section__ul">
-            <li class="section__li--HP">
+          <ul class="section__ul" tabIndex="0">
+            <li class="section__li section__li--HP">
               <label class="section__label" for="HP">HP</label>
               <div class="section__text" id="HP"> </div>
             </li>
-            <li class="section__li--Attack">
+            <li class="section__li section__li--Attack">
               <label class="section__label" for="Attack">Attack</label>
               <div class="section__text" id="Attack"> </div>
             </li>
-            <li class="section__li--Defense">
+            <li class="section__li section__li--Defense">
               <label class="section__label" for="Defense">Defense</label>
               <div class="section__text" id="Defense"> </div>
             </li>
-            <li class="section__li--Sp-Atk">
+            <li class="section__li section__li--Sp-Atk">
               <label class="section__label" for="Sp-Atk">Sp-Atk</label>
               <div class="section__text" id="Sp-Atk"> </div>
             </li>
-            <li class="section__li--Sp-Def">
+            <li class="section__li section__li--Sp-Def">
               <label class="section__label" for="Sp-Def">Sp-Def</label>
               <div class="section__text" id="Sp-Def"> </div>
             </li>
-            <li class="section__li--Speed">
+            <li class="section__li section__li--Speed">
               <label class="section__label" for="Speed">Speed</label>
               <div class="section__text" id="Speed"> </div>
             </li>
-            <li class="section__li--Total">
+            <li class="section__li section__li--Total">
               <label class="section__label" for="Total">Total</label>
               <div class="section__text" id="Total"> </div>
             </li>

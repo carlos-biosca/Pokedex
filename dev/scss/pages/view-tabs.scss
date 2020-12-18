@@ -1,29 +1,49 @@
 .tap-bar {
   position: relative;
 
+  @include laptop {
+    font-size: 1.5rem;
+  }
+
   &__input {
     @include reset-radio;
   }
 
   &__labels {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-around;
     background-color: $pure-color;
     color: lighten($color: $black-color, $amount: 40%);
-    box-sizing: border-box;
     height: 10vh;
+    box-sizing: border-box;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom: 1px solid lighten($color: $black-color, $amount: 40%);
     padding: 0 1rem;
+
+    @include laptop {
+      height: 13vh;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    }
   }
 
   &__label {
-    padding: 1.2rem 0rem;
+    padding: 1.1rem 0rem;
     min-width: 70px;
     text-align: center;
     border-bottom: 3px solid $pure-color;
+    cursor: pointer;
+
+    @include laptop {
+      font-size: 2rem;
+      padding: 1.5rem 0rem;
+
+      &:hover {
+        border-top: 3px solid $black-color;
+      }
+    }
 
     &:focus {
       border-top: 3px solid $black-color;

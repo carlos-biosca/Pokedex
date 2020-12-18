@@ -6,9 +6,21 @@
   height: 50px;
   border: none;
   padding: 1rem;
+  cursor: pointer;
 
   &:focus {
     border: 3px solid $white-color;
     outline: none;
+  }
+
+  @include laptop {
+    background-size: 55px 55px;
+    width: 80px;
+    height: 80px;
+    margin: 0 1.2rem;
+
+    &:hover {
+      border: 3px solid $white-color;
+    }
   }
 }

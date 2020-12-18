@@ -1,12 +1,15 @@
 html {
   scroll-behavior: smooth;
+  background-color: lighten($color: $black-color, $amount: 25%);
 }
 
 body {
-  background-color: $white-color;
+  background-color: $grey-color;
   color: $black-color;
   font-weight: $font-regular;
-  min-height: 100vh;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
   font-family: $main-font, sans-serif;
 }
 

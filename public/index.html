@@ -7,30 +7,32 @@
     <title>Pokedex</title>
   </head>
   <body>
-    <div class="topbar" id="topbar">
-      <input class="topbar__input" type="text" name="search" placeholder="Name/#000" id="search"/>
-    </div>
-    <div class="slider" id="slider">
-      <button class="slider__button" type="button" tabindex="0" alt="sliders" id="slider-button"> </button><img class="slider__img" src="assets/img/pokeball.png" alt="pokeball" id="slider-img"/>
-    </div>
-    <div class="modal" id="modal">
-      <form class="radio" id="radio-group">
-        <p class="radio__title">Sort By:
-          <div class="radio__grid">
-            <div class="radio__options" id="radio-options">
-              <input class="radio__input" type="radio" id="number" name="sort" value="number" checked="checked"/>
-              <input class="radio__input" type="radio" id="name" name="sort" value="name"/>
-              <label class="radio__label" for="number" tabIndex="0">number</label>
-              <label class="radio__label" for="name" tabIndex="0">name</label>
+    <header class="header">
+      <div class="topbar" id="topbar">
+        <input class="topbar__input" type="text" name="search" placeholder="Name/#000" id="search"/>
+      </div>
+      <div class="slider" id="slider">
+        <button class="slider__button" type="button" tabindex="0" alt="sliders" id="slider-button"> </button><img class="slider__img" src="assets/img/pokeball.png" alt="pokeball" id="slider-img"/>
+      </div>
+      <div class="modal" id="modal">
+        <form class="radio" id="radio-group">
+          <p class="radio__title">Sort By:
+            <div class="radio__grid">
+              <div class="radio__options" id="radio-options">
+                <input class="radio__input" type="radio" id="number" name="sort" value="number" checked="checked"/>
+                <input class="radio__input" type="radio" id="name" name="sort" value="name"/>
+                <label class="radio__label" for="number" tabIndex="0">number</label>
+                <label class="radio__label" for="name" tabIndex="0">name</label>
+              </div>
+              <button class="modal__button" type="button" id="favorites">favorites</button>
             </div>
-            <button class="modal__button" type="button" id="favorites">favorites</button>
-          </div>
-        </p>
-      </form>
-    </div>
-    <div class="title">
-      <h1>Pokedex</h1>
-    </div>
+          </p>
+        </form>
+      </div>
+      <div class="title">
+        <h1>Pokedex</h1>
+      </div>
+    </header>
     <main class="main" id="main">
       <div class="main__content" id="main-content"> 
         <p>No Matches</p>

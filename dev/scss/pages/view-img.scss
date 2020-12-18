@@ -4,10 +4,24 @@
   height: 20vh;
   position: relative;
 
+  @include laptop {
+    height: 65vh;
+    align-items: center;
+    overflow: hidden;
+  }
+
   & img {
     height: 24vh;
     z-index: 10;
     position: absolute;
     background-color: transparent;
+
+    @include laptop {
+      height: 40vh;
+    }
+
+    @include desktop {
+      height: 50vh;
+    }
   }
 }

@@ -21,7 +21,7 @@ const renderColor = (type) => {
   const color = getComputedStyle(document.documentElement)
     .getPropertyValue(`--${type}-color`).trim();
   const spans = document.getElementById('basicinfo').querySelectorAll('span')
-  document.body.style.backgroundColor = color
+  document.getElementById('top-block').style.backgroundColor = color
   spans.forEach(span => {
     span.style.backgroundColor = LightenDarkenColor(color, 80)
   })

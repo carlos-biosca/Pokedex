@@ -5,3 +5,44 @@
 @import "view-tabs";
 @import "view-section";
 @import "view-moves";
+
+@include tablet {
+  body,
+  .section {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include laptop {
+  .grid-content {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  body {
+    max-width: 1024px;
+  }
+
+  .section {
+    max-width: 512px;
+    margin-left: 0;
+    margin-right: 0;
+
+    &::-webkit-scrollbar {
+      width: 0 !important;
+    }
+  }
+
+  @include desktop {
+    body {
+      max-width: 1440px;
+    }
+
+    .section {
+      max-width: 720px;
+    }
+  }
+}

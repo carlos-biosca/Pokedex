@@ -9,6 +9,14 @@
   border-bottom: 3px solid $black-color;
   position: relative;
 
+  @include laptop {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
   &__content {
     display: none;
     min-height: 40vh;

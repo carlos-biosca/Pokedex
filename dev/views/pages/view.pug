@@ -1,34 +1,37 @@
 extends ../templates/template.pug
 
-block top
+  .grid-content
 
-    #top-icons.top-icons
-      button(alt="arrow" tabindex="0")#icon-arrow.top-icons__arrow 
-      button(alt="heart" tabindex="0")#icon-heart.top-icons__heart
+    block top
+        #top-block.top-block
+          #top-icons.top-icons
+            button(alt="arrow" tabindex="0")#icon-arrow.top-icons__arrow 
+            button(alt="heart" tabindex="0")#icon-heart.top-icons__heart
 
-block main
-    #main
-      #pokeinfo.pokeinfo
-        #basicinfo.pokeinfo__type
-          h1#pokename 
-        #numberinfo.pokeinfo__number
-          p#pokenumber 
-      #pokeimg.pokeimg
-        img(src="", alt="Pokemon")#pokedataimg
+          #top-view.top-view
+            #pokeinfo.pokeinfo
+              #basicinfo.pokeinfo__type
+                h1#pokename 
+              #numberinfo.pokeinfo__number
+                p#pokenumber 
+            #pokeimg.pokeimg
+              img(src="", alt="Pokemon")#pokedataimg
 
-      #tap-bar.tap-bar
-        input(type="radio" name="item" checked)#section1.tap-bar__input
-        input(type="radio" name="item")#section2.tap-bar__input
-        input(type="radio" name="item")#section3.tap-bar__input
-        .tap-bar__labels
-          - for(var i = 1; i < 4; i++)
-              label.tap-bar__label(for='section' + i tabindex="0")= tabs[i-1]
-        section.section
-          include ../includes/about
-        section.section
-          include ../includes/stats
-        section.section
-          include ../includes/moves
+    block main
+
+        #tap-bar.tap-bar
+          input(type="radio" name="item" checked)#section1.tap-bar__input
+          input(type="radio" name="item")#section2.tap-bar__input
+          input(type="radio" name="item")#section3.tap-bar__input
+          .tap-bar__labels
+            - for(var i = 1; i < 4; i++)
+                label.tap-bar__label(for='section' + i tabindex="0")= tabs[i-1]
+          section.section
+            include ../includes/about
+          section.section
+            include ../includes/stats
+          section.section
+            include ../includes/moves
 
 block script
   script(src="js/view.js")

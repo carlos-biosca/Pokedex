@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const pokemonNumber = 50
+  const pokemonNumber = 151
 
   const checkValues = () => {
     if (JSON.parse(sessionStorage.getItem("input"))) {
@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       return
     }
+    if (JSON.parse(sessionStorage.getItem("favoritesOn"))) {
+      favoritesOn = !favoritesOn
+      modalFavorites.classList.toggle('isActive')
+      modalFavorites.innerHTML = 'ON'
+    }
   }
 
   const loadData = () => {
@@ -21,11 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(data => {
         renderData(data)
         checkValues()
+        checkFavorites()
         filterNames()
         sortOption()
         lazy()
         getLinks()
-        checkFavorites()
       })
       .catch((err) => console.log(err));
   }

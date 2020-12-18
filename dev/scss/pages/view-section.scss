@@ -12,25 +12,49 @@
   display: flex;
   justify-content: center;
 
+  @include laptop {
+    width: 50%;
+    top: 13vh;
+    left: 50%;
+    height: 88vh;
+  }
+
   &__ul {
     @include reset-list;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    @include tablet {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
   }
 
   &__li {
+    padding: 0.6rem 1.5rem;
+
+    @include tablet {
+      font-size: 1.2rem;
+      padding: 0.8rem 1.5rem;
+    }
+
+    @include laptop {
+      font-size: 2rem;
+      padding: 1.2rem 1.5rem;
+    }
+
     &--weight,
     &--height,
     &--color {
       display: grid;
       grid-template-columns: 30% 70%;
-      padding: 0.6rem 1rem;
       text-transform: capitalize;
     }
 
     &--abilities,
     &--flavor {
-      padding: 0.6rem 1rem;
       text-transform: capitalize;
     }
 
@@ -43,7 +67,12 @@
     &--Total {
       display: grid;
       grid-template-columns: 30% 70%;
-      padding: 0.6rem 1rem;
+
+      @include laptop {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 
@@ -75,7 +104,16 @@
     & span {
       min-width: 30px;
       text-align: center;
+
+      @include laptop {
+        min-width: 50px;
+      }
+
+      @include desktop {
+        min-width: 80px;
+      }
     }
+
     & progress {
       margin-left: 1rem;
       -webkit-appearance: none;

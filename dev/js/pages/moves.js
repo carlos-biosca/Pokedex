@@ -6,18 +6,22 @@ const list = ['effect', 'flavor']
 
 const loadMoves = (data) => {
   const list = document.getElementById('moves-list')
-  data.forEach(move => {
-    const li = document.createElement('li')
-    li.innerHTML = move.move.name
-    li.classList.add('moves-list__item')
-    li.setAttribute('tabIndex', 0)
-    li.dataset.url = move.move.url
-    list.appendChild(li)
+  if (data.length == 0) {
+    list.innerHTML = 'NO-DATA'
+  } else {
+    data.forEach(move => {
+      const li = document.createElement('li')
+      li.innerHTML = move.move.name
+      li.classList.add('moves-list__item')
+      li.setAttribute('tabIndex', 0)
+      li.dataset.url = move.move.url
+      list.appendChild(li)
 
-    const div = document.createElement('div')
-    div.classList.add('moves-list__card')
-    list.appendChild(div)
-  })
+      const div = document.createElement('div')
+      div.classList.add('moves-list__card')
+      list.appendChild(div)
+    })
+  }
 }
 
 const createCard = (card, data) => {
@@ -68,6 +72,7 @@ const moves = document.getElementById('moves-list')
 moves.addEventListener('click', (e) => {
   if (e.target.classList.contains('moves-list__item')) {
     if (e.target.classList.contains('created')) {
+      e.target.classList.toggle('isActive')
       e.target.nextElementSibling.classList.toggle('isActive')
     } else {
       fetch(`${e.target.dataset.url}`)
@@ -75,6 +80,7 @@ moves.addEventListener('click', (e) => {
         .then(data => {
           createCard(e.target.nextElementSibling, data)
           e.target.classList.add('created')
+          e.target.classList.add('isActive')
           e.target.nextElementSibling.classList.add('isActive')
         })
         .catch((err) => console.log(err));
