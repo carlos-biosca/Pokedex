@@ -101,7 +101,7 @@ moves.addEventListener('keypress', (e) => {
           .then(data => {
             createCard(e.target.nextElementSibling, data)
             e.target.classList.add('created')
-            e.target.nextElementSibling.classList.add('isActive')
+            e.target.nextElementSibling.classList.toggle('isActive')
           })
           .catch((err) => console.log(err));
       }

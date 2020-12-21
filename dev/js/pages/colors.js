@@ -22,6 +22,7 @@ const renderColor = (type) => {
     .getPropertyValue(`--${type}-color`).trim();
   const spans = document.getElementById('basicinfo').querySelectorAll('span')
   document.getElementById('top-block').style.backgroundColor = color
+  document.getElementById('tap-bar').style.backgroundColor = color
   spans.forEach(span => {
     span.style.backgroundColor = LightenDarkenColor(color, 80)
   })

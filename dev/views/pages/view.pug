@@ -1,5 +1,6 @@
 extends ../templates/template.pug
 
+block body
   .grid-content
 
     block top
@@ -34,6 +35,6 @@ extends ../templates/template.pug
             include ../includes/moves
 
 block script
-  script(src="js/view.js")
+    script(src="js/view.js")
       
       

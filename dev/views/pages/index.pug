@@ -1,6 +1,8 @@
 extends ../templates/template.pug
 
-block top
+block body
+
+  block top
 
     header.header
     
@@ -22,9 +24,9 @@ block top
               button(type="button" id="favorites").modal__button favorites
               
       .title
-        h1 Pokedex
+        h1 Pokédex
 
-block main
+  block main
 
     main#main.main
       #main-content.main__content 
