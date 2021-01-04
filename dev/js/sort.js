@@ -55,6 +55,7 @@ const sortOption = () => {
   const newList = toNodeList(boxes)
   main.appendChild(newList)
   isCardVisible()
+  sessionStorage.setItem("option", JSON.stringify(option))
 }
 
 form.addEventListener('change', sortOption)

@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       element.innerHTML = `
       <div class="pokebox__number">#${id}</div>
       <img crossorigin="anonymous" data-src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index + 1}.png" alt="" class="pokebox__img lazy">
-      <img src="assets/img/pokeball.png" alt="" class="pokebox__icon">
+      <img src="assets/img/pokeball.svg" alt="" class="pokebox__icon">
       <div class="pokebox__name" id="pokename">${name}</div>`
       fragment.appendChild(element)
     })

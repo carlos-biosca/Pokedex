@@ -1,42 +1,54 @@
 .modal {
   position: absolute;
+  display: flex;
+  align-items: center;
   background-color: $yellow-color;
-  top: -18vh;
+  top: -168.66px;
   left: 0;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  height: 18vh;
+  height: 168.66px;
   z-index: 150;
   transform: translateY(0);
   transition: transform 0.35s;
-  display: flex;
-  align-items: center;
 
   &.isActive {
     transform: translateY(100%);
   }
 
+  @include tablet {
+    top: -187.4px;
+    height: 187.4px;
+  }
+
+  @include laptop {
+    top: -206.14px;
+    height: 206.14px;
+  }
+
+  &__options {
+    display: flex;
+    align-items: center;
+    margin-left: 0.2rem;
+  }
+
   &__button {
-    width: 100px;
-    justify-self: end;
-    font-weight: $font-bold;
-    text-align: center;
-    border-radius: 10px;
     background-color: $pure-color;
-    border: 3px solid $pure-color;
     outline: none;
     color: $black-color;
-    width: 100px;
+    width: 50px;
+    height: 80%;
+    margin-left: 0.5rem;
     cursor: pointer;
 
     @include tablet {
-      margin-right: 30px;
+      margin-left: 1rem;
+      width: 75px;
     }
 
     @include laptop {
-      font-size: 1.3rem;
-      width: 150px;
+      width: 120px;
 
       &:hover {
         border: 3px solid $black-color;
@@ -45,10 +57,6 @@
 
     &:focus {
       border: 3px solid $black-color;
-    }
-
-    &.isActive {
-      background: $yellow-color;
     }
   }
 }

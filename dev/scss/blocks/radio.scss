@@ -7,7 +7,8 @@
   }
 
   &__title {
-    margin: 0.8rem 0 0.8rem 0;
+    margin-top: 0.8rem;
+    margin-bottom: 1.2rem;
     font-size: 1.3rem;
     color: $black-color;
 
@@ -21,7 +22,12 @@
   }
   &__grid {
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 55% 45%;
+    font-size: 1rem;
+
+    @include laptop {
+      font-size: 1.3rem;
+    }
   }
 
   &__options {
@@ -42,18 +48,16 @@
 
   &__label {
     box-sizing: border-box;
-    font-size: 1rem;
     font-weight: $font-bold;
     color: $black-color;
     display: inline-block;
     padding: 10px;
-    width: 80px;
+    width: 75px;
     text-align: center;
     border: 3px solid $yellow-color;
     cursor: pointer;
 
     @include laptop {
-      font-size: 1.3rem;
       width: 120px;
 
       &:hover {

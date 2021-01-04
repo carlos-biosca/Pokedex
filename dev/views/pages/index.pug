@@ -11,7 +11,7 @@ block body
       
       #slider.slider
         button(type="button" tabindex="0" alt="sliders")#slider-button.slider__button 
-        img(src="assets/img/pokeball.png", alt="pokeball")#slider-img.slider__img
+        img(src="assets/img/pokeball.svg", alt="pokeball")#slider-img.slider__img
 
       #modal.modal
         form#radio-group.radio
@@ -21,16 +21,17 @@ block body
                 input(type="radio" id="number" name="sort" value="number" checked).radio__input
                 input(type="radio" id="name" name="sort" value="name").radio__input
                 +labels(radio)
-              button(type="button" id="favorites").modal__button favorites
+              .modal__options
+                span.modal__span Favorites:
+                button(type="button" id="favorites").modal__button OFF
               
-      .title
-        h1 Pokédex
+      h1.title Pokédex
 
   block main
 
     main#main.main
       #main-content.main__content 
-        p No Matches
+        p Not Found
 
     a(href="#")#gotop.gotop
       img(src="assets/icons/arrow.svg")

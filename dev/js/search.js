@@ -21,6 +21,7 @@ const filterNames = () => {
   })
   isCardVisible()
   mainIsEmpty(boxes)
+  sessionStorage.setItem("input", JSON.stringify(inputValue.value))
 }
 
 const filterFavorites = () => {
@@ -32,22 +33,19 @@ const filterFavorites = () => {
     modalFavorites.innerHTML = 'ON'
   } else {
     boxes.forEach(box => box.style.display = 'block')
-    modalFavorites.innerHTML = 'Favorites'
+    modalFavorites.innerHTML = 'OFF'
   }
   isCardVisible()
   mainIsEmpty(boxes)
 }
 
 const mainIsEmpty = (boxes) => {
-  let display = 0
-  boxes.forEach((box) => {
-    box.classList[1] == 'isNotVisible' ? '' : display++
-  })
-  if (display === 0) {
-    mainContent.classList.add('empty')
-  }
-  if (display > 0) {
-    mainContent.classList.remove('empty')
+  mainContent.classList.add('empty')
+  for (let box of boxes) {
+    if (box.style.display == 'block') {
+      mainContent.classList.remove('empty')
+      break
+    }
   }
 }
 
@@ -56,4 +54,5 @@ modalFavorites.addEventListener('click', () => {
   favoritesOn = !favoritesOn
   modalFavorites.classList.toggle('isActive')
   filterFavorites()
+  sessionStorage.setItem("favoritesOn", JSON.stringify(favoritesOn))
 })

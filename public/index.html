@@ -30,7 +30,7 @@
       <input class="topbar__input" type="text" name="search" placeholder="Name/#000" id="search"/>
     </div>
     <div class="slider" id="slider">
-      <button class="slider__button" type="button" tabindex="0" alt="sliders" id="slider-button"> </button><img class="slider__img" src="assets/img/pokeball.png" alt="pokeball" id="slider-img"/>
+      <button class="slider__button" type="button" tabindex="0" alt="sliders" id="slider-button"> </button><img class="slider__img" src="assets/img/pokeball.svg" alt="pokeball" id="slider-img"/>
     </div>
     <div class="modal" id="modal">
       <form class="radio" id="radio-group">
@@ -42,18 +42,18 @@
               <label class="radio__label" for="number" tabIndex="0">number</label>
               <label class="radio__label" for="name" tabIndex="0">name</label>
             </div>
-            <button class="modal__button" type="button" id="favorites">favorites</button>
+            <div class="modal__options"><span class="modal__span">Favorites:</span>
+              <button class="modal__button" type="button" id="favorites">OFF</button>
+            </div>
           </div>
         </p>
       </form>
     </div>
-    <div class="title">
-      <h1>Pokédex</h1>
-    </div>
+    <h1 class="title">Pokédex</h1>
   </header>
   <main class="main" id="main">
     <div class="main__content" id="main-content"> 
-      <p>No Matches</p>
+      <p>Not Found</p>
     </div>
   </main><a class="gotop" href="#" id="gotop"><img src="assets/icons/arrow.svg"/></a>
   <script src="js/scripts-min.js"></script>

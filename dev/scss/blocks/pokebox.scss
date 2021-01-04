@@ -1,6 +1,6 @@
 .pokebox {
   background-color: $white-color;
-  margin: 5px;
+  margin: 15px;
   position: relative;
   padding-top: 1rem;
   transition: transform 0.35s;
@@ -12,7 +12,6 @@
 
   @include laptop {
     max-width: 220px;
-    margin: 15px;
 
     &:hover {
       outline: 6px solid $black-color;
@@ -47,6 +46,10 @@
     text-align: center;
     padding: 8px 10px 8px 0;
     color: $black-color;
+
+    @include desktop {
+      font-size: 1.1rem;
+    }
   }
 
   &__name {
